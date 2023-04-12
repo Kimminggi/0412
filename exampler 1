@@ -1,0 +1,19 @@
+import matplotlib.pyplot as plt
+import numpy as np
+
+def volume(x,a,b):
+    return x*(a-2*x)*(b-2*x)
+
+x=np.linspace(0,0.5,1000)
+v=volume(x,1,2)
+plt.plot(x,v)
+plt.show()
+
+def derivative(x,a,b):
+    return 12*x*x + (-4*a-4*b)*x+a*b
+
+dv=derivative(x,1,2)
+plt.plot(x,v)
+plt.plot(x,dv/15)
+plt.axhline(0,color="r")
+plt.show()
